@@ -8,12 +8,5 @@
     "postdeploy": "psql $DATABASE_URL < schema.sql"
   },
   "addons": ["heroku-postgresql"],
-  "env": {
-    "TLS_CERT_FILE": {
-      "description": "Cert for listener"
-    },
-    "TLS_KEY_FILE": {
-      "description": "Key for listener"
-    }
-  }
+  "env": {}
 }
