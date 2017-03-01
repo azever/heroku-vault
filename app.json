@@ -8,5 +8,6 @@
     "postdeploy": "psql $DATABASE_URL < schema.sql"
   },
   "addons": ["heroku-postgresql"],
-  "env": {}
+  "env": {},
+  "buildpacks": [{"url": "http://github.com/ryandotsmith/null-buildpack.git"}]
 }
