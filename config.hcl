@@ -1,5 +1,5 @@
 backend "postgresql" {
-  connection_url = {{DATABASE_URL}}
+  connection_url = "{{DATABASE_URL}}"
 }
 
 disable_mlock = true
