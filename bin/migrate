@@ -1,3 +1,2 @@
-
 #!/usr/bin/env bash
 psql $DATABASE_URL < schema.sql
