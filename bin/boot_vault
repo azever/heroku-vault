@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-./setup_vault
+./bin/setup_vault
 sed -i "s/{{PORT}}/$PORT/g" config.hcl
 sed -i "s#{{DATABASE_URL}}#$DATABASE_URL#g" config.hcl
 cat config.hcl
