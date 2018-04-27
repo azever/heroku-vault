@@ -3,4 +3,4 @@
 sed -i "s/{{PORT}}/$PORT/g" config.hcl
 sed -i "s#{{DATABASE_URL}}#$DATABASE_URL#g" config.hcl
 cat config.hcl
-./vault server --config=config.hcl
+./bin/vault server --config=config.hcl
