@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export VAULT_VERSION=0.10.0
+export VAULT_VERSION=0.10.1
 
 ARCHIVE_NAME=vault_${VAULT_VERSION}_linux_amd64
 FILE_NAME=${ARCHIVE_NAME}.zip
@@ -10,5 +10,4 @@ mkdir -p ./tmp/build && \
 wget $BUILDPACK_VAULT_PACKAGE -P ./tmp/build -O $FILE_NAME && \
 unzip -d ./tmp/build $FILE_NAME && \
 mv -f ./tmp/build/vault .
-rm -rf ./tmp
-rm $FILE_NAME
+rm -rf ./tmp $FILE_NAME
