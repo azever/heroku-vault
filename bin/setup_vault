@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+export VAULT_VERSION=0.10.0
+
+ARCHIVE_NAME=vault_${VAULT_VERSION}_linux_amd64
+FILE_NAME=${ARCHIVE_NAME}.zip
+BUILDPACK_VAULT_PACKAGE=https://releases.hashicorp.com/vault/${VAULT_VERSION}/${FILE_NAME}
+
+mkdir -p ./tmp/build && \
+wget $BUILDPACK_VAULT_PACKAGE -P ./tmp/build -O $FILE_NAME && \
+unzip -d ./tmp/build $FILE_NAME && \
+mv -f ./tmp/build/vault .
+rm -rf ./tmp
+rm $FILE_NAME
